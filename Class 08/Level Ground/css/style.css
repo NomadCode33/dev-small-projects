@@ -1,0 +1,840 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES + FONT
+/*******************************************/
+body {
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+}
+
+.introGrit h1, .introGrit p, .hero-image-label,
+.whySection h2, .fiftyBox h3, .volunteerGround h2,
+.option-buttons {
+  font-family: "Oswald", "Bebas Neue", sans-serif
+}
+
+.introGrit h1 {
+  font-size: 300px;
+}
+
+.footer-main li, .exempt h4, .ali,
+.font p  {
+  font-weight: bold;
+}
+
+
+/************************************************************************************
+/* LAYOUT
+/************************************************************************************/
+
+/******************************************
+/* HEADER NAVIGATION
+/*******************************************/
+/* Ensures predictable box sizing and removes default spacing. */
+     body, html {
+          margin: 0;
+          padding: 0;
+          font-family: sans-serif;
+     }
+
+    header, footer, section, nav, div {
+      border: 1px solid transparent;
+    }
+
+    header {
+      background: #6A7B8C;
+      height: 90px;
+      padding: 20px;
+    }
+    header nav {
+      width: 100%;
+    }
+
+    /* Makes the nav sections line up horizontally*/
+    .nav-left, .nav-center, .nav-right {
+      float: left;
+      width: 33.33%;
+      text-align: center;
+    }
+
+    .nav-left a, .nav-right a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .nav-left {
+      font-size: 13px;
+      line-height: 30px;
+    }
+
+    .nav-left a:hover {
+     text-decoration: underline;
+    }
+
+    .donate-button {
+          display: inline-block;
+          padding: 8px 16px;
+          border: 1px solid white;
+          background-color: transparent;
+          vertical-align: middle;
+          color: white;
+          text-transform: uppercase;
+          font-size: 12px;
+          letter-spacing: 1px;
+          border-radius: 3px;
+          text-decoration: none;
+          font-weight: bold;
+          transition: background-color 0.3s, color 0.3s;
+     }
+
+     .donate-button:hover {
+          background-color: white;
+          color: #001833; /* or the header background color for contrast */
+     }
+
+    .nav-center img {
+     height: 30px;
+     vertical-align: middle;
+    }
+
+/******************************************
+/* INTROGRIT/HERO SECTION
+/*******************************************/
+    /* aka IntroGrit. Text is centered and spaced*/
+    .hero {
+      background: #6A7B8C;
+      color: white;
+      text-align: center;
+      padding: 0 20px 10px 20px;
+      clear: both;
+      height: 390px;
+    }
+
+    .hero h1 {
+      font-size: 5em;
+      margin-bottom: 20px;
+    }
+
+    .hero p, .hero a {
+      display: block;
+      margin: 10px auto;
+    }
+
+    .hero a {
+      margin-top: 35px;
+      color: rgba(255, 255, 255, 0.8); /* soft white */
+      text-decoration: none;
+    }
+
+    .hero a:hover {
+     text-decoration: underline;
+    }
+
+    .hero p {
+      font-size: 20px;
+      padding: 0 200px;
+    }
+
+    .hero-image-label {
+     display: block;
+     margin-top: 75px;
+     color: rgba(63, 64, 78);
+     font-style: italic;
+     font-size: 14px;
+     text-align: center;
+     }
+
+
+
+
+/******************************************
+/* WHY SECTION
+/*******************************************/
+    /* White background and center aligned content*/
+    .whySection {
+      background: white;
+      text-align: center;
+      padding: 40px 350px;
+      height: 340px;
+    }
+
+    .whyBox {
+      margin-top: 30px;
+    }
+
+    .whyBox h2 {
+      font-size: 30px;
+    }
+
+    .whyBox p {
+      padding: 0 50px;
+    }
+
+/******************************************
+/* GROUPEDVISIT/FIFTYBOX SECTIONS
+/*******************************************/
+    /* Gray background and center aligned content*/
+    .groupedVisit {
+      background: #D3D3D3;
+      padding: 40px 0;
+      height: 600px;
+    }
+
+    .fiftyBox {
+      float: left;
+      width: 50%;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .fiftyBox img {
+      background: #6A7B8C;
+      height: 150px;
+      width: 50%;
+      margin-bottom: 20px;
+    }
+
+    .left {
+      padding-left: 130px;
+    }
+
+    .right {
+      padding-right: 130px;
+    }
+
+    .twoBox p {
+      padding: 0 50px;
+    }
+
+/******************************************
+/* VOLUNTEERGROUND SECTIONS
+/*******************************************/
+    .volunteerGround {
+      background: white;
+      text-align: center;
+      padding: 40px 350px;
+      clear: both;
+      height: 435px;
+    }
+
+    .volunteerBox {
+      margin-top: 42px;
+    }
+
+    .volunteerBox h2 {
+      font-size: 30px;
+    }
+
+    .volunteerBox p {
+      padding: 0 50px;
+    }
+
+/******************************************
+/* GROUPEDVISIT & VOLUNTGROUND BUTTONS
+/*******************************************/
+
+    .option-buttons {
+          display: inline-block;
+          margin-top: 10px;
+          padding: 20px 50px;
+          border: 1px solid gray;
+          background-color: transparent;
+          color: black;
+          text-transform: uppercase;
+          font-size: 15px;
+          border-radius: 3px;
+          text-decoration: none;
+          font-weight: bold;
+          transition: background-color 0.3s, color 0.3s;
+     }
+
+     .option-buttons:hover {
+          background-color: #6A7B8C;
+          color: white; /* or the header background color for contrast */
+     }
+
+     
+
+/******************************************
+/* FOOTER SECTION
+/*******************************************/
+    /* New footer design*/
+    footer {
+     background: #001833;
+     color: white;
+     padding: 20px;
+     font-size: 14px;
+    }
+
+    .footerFifty {
+      float: left;
+      width: 50%;
+      margin-top: 10px;
+    }
+
+    .footer-social {
+     float: left;
+     width: 100%;
+     
+    }
+
+    .footer-social img {
+     float: left;
+     margin-right: 10px;
+     width: 50px;
+     height: 24px;
+     color: white;
+    }
+
+    .footer-main {
+     float: left;
+     width: 100%;
+    }
+
+    .footer-column {
+     float: left;
+     width: 100%;
+     padding: 0 10px 10px 10px;
+    }
+
+    .footer-column h4 {
+     margin-bottom: 10px;
+     font-size: 14px;
+     font-weight: bold;
+     color: #6A7B8C
+    }
+
+    .levelLocation {
+      padding: 0 10px 0 450px; 
+    }
+
+    .exempt h4 {
+      color: white;
+    }
+
+    .exempt p {
+      line-height: 18px;
+    }
+
+    .footer-column ul {
+     list-style: none;
+     padding: 0;
+     margin: 0 0 10px 0;
+    }
+
+    .footer-column ul li {
+     margin-bottom: 5px;
+    }
+
+    .footer-column a {
+     color: white;
+     text-decoration: none;
+    }
+
+    .footer-column a:hover {
+     text-decoration: underline;
+    }
+
+    .line-bottom {
+      margin-top: 10px;
+    }
+
+    .featureFifty {
+      float: left;
+      width: 10%;
+    }
+
+    .classPercent {
+      width: 14%;
+    }
+
+    .footerColumnFifty {
+      float: left;
+      width: 40%;
+      /*text-align: center;
+      margin-top: 50px;*/
+    }
+
+    .copyright {
+      width: 60%;
+    }
+
+    .footer-logo {
+     float: right;
+     height: 30px;
+     margin-top: 10px;
+     padding-right: 10px;
+    }
+
+/******************************************
+/* MEDIA QUERIES
+/*******************************************/
+
+/******************************************
+/* PHONES
+/*******************************************/
+/* Phones (max-width: 600px) */
+@media screen and (max-width: 600px) {
+  /* GENERAL RESETS FOR MOBILE */
+  body, html {
+    overflow-x: hidden;
+  }
+
+  /* NAVIGATION */
+  .nav-left, .nav-center, .nav-right {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .donate-button {
+    margin-top: 10px;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  .hero-box {
+    margin-top: 60px;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+
+  .hero-image-label {
+    margin-top: 40px;
+  }
+
+  /* WHY SECTION */
+  .whySection {
+    padding: 30px 20px;
+    height: auto;
+  }
+
+  .whyBox {
+    margin: 0;
+  }
+
+  .whyBox p {
+    padding: 0 10px;
+  }
+
+  /* GROUPED VISIT */
+  .groupedVisit {
+    padding: 50px 0;
+    height: auto;
+  }
+
+  .fiftyBox {
+    float: none;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .fiftyBox img {
+    width: 70%;
+  }
+
+  .left, .right {
+    padding: 0;
+  }
+
+  .left {
+    margin: 0;
+  }
+
+  .twoBox p {
+    padding: 0 35px;
+  }
+
+  /* VOLUNTEER */
+  .volunteerGround {
+    padding: 30px 20px;
+    height: auto;
+  }
+
+  .volunteerBox {
+    margin: 0;
+  }
+
+  .volunteerBox p {
+    padding: 0 10px;
+  }
+
+  .option-buttons {
+    padding: 15px 20px;
+    font-size: 14px;
+  }
+
+  /* FOOTER */
+  .footerFifty,
+  .footer-column,
+  .footerColumnFifty {
+    float: none;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .footer-social {
+    margin-bottom: 30px;
+  }
+
+  .footer-social img {
+    float: none;
+    display: inline-block;
+    margin: 0 10px 10px;
+  }
+
+  .levelLocation {
+    padding: 0;
+  }
+
+  .footer-logo {
+    float: none;
+    display: block;
+    margin: 10px auto;
+  }
+
+  .line-bottom strong {
+    display: none; /* hide horizontal line for smaller screens */
+  }
+
+  .featureFifty, .classPercent {
+    float: none;
+    width: 100%;
+  }
+
+  .copyright {
+    width: 100%;
+  }
+}
+
+/******************************************
+/* IPAD MINI
+/*******************************************/
+/* ipad/mini type tablets (min-width: 700px) and (max-width: 850px) */
+@media screen and (min-width: 700px) and (max-width: 850px) {
+  /* General Container Fixes */
+  body, html {
+    overflow-x: hidden;
+  }
+
+  .nav-right {
+    padding-left: 80px;
+  }
+
+  /* Hero Section */
+  .hero {
+    height: auto;
+    padding: 30px 40px;
+  }
+
+  .hero h1 {
+    font-size: 3.2em;
+  }
+
+  .hero p {
+    font-size: 18px;
+    padding: 0 40px;
+  }
+
+  /* Why Section */
+  .whySection {
+    padding: 40px 60px;
+    height: auto;
+  }
+
+  .whyBox {
+    margin: 0;
+  }
+
+  .whyBox p {
+    padding: 0 30px;
+  }
+
+  /* Grouped Visit */
+  .groupedVisit {
+    padding: 40px 0;
+    height: auto;
+  }
+
+  .fiftyBox {
+    float: none;
+    width: 100%;
+    padding: 20px 40px;
+  }
+
+  .fiftyBox img {
+    width: 55%;
+  }
+
+  .left, .right {
+    padding: 0 100px;
+  }
+
+  .twoBox p {
+    padding: 0 30px;
+  }
+
+  .option-buttons {
+    padding: 18px 40px;
+    font-size: 14px;
+  }
+
+  /* Volunteer Section */
+  .volunteerGround {
+    padding: 40px 60px;
+    height: auto;
+  }
+
+  .volunteerBox {
+    margin: 0;
+  }
+
+  .volunteerBox p {
+    padding: 0 20px;
+  }
+
+  /* Footer */
+  .footerFifty,
+  .footer-column,
+  .footerColumnFifty {
+    float: none;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .footer-logo {
+    float: none;
+    margin: 10px auto;
+    display: block;
+  }
+
+  .footer-social {
+    margin-bottom: 30px;
+  }
+
+  .footer-social img {
+    float: none;
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .levelLocation {
+    padding: 0;
+  }
+
+  .featureFifty,
+  .classPercent {
+    float: none;
+    width: 100%;
+  }
+
+  .copyright {
+    width: 100%;
+  }
+
+  .line-bottom strong {
+    display: none;
+  }
+}
+
+/******************************************
+/* NEWER TABLETS
+/*******************************************/
+/* Tablets (min-width: 851px and max-width: 1024px) */
+@media screen and (min-width: 851px) and (max-width: 1024px) {
+  /* Header */
+  .nav-left, .nav-center, .nav-right {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .nav-right {
+    padding-left: 150px;
+  }
+
+  /* Hero */
+  .hero {
+    height: auto;
+    padding: 40px 40px;
+  }
+
+  .hero h1 {
+    font-size: 3.5em;
+  }
+
+  .hero p {
+    font-size: 18px;
+    padding: 0 80px;
+  }
+
+  /* Why Section */
+  .whySection {
+    padding: 40px 80px;
+    height: auto;
+  }
+
+  .whyBox {
+    margin: 0;
+  }
+
+  .whyBox p {
+    padding: 0 30px;
+  }
+
+  /* Grouped Visit */
+  .groupedVisit {
+    height: auto;
+  }
+
+  .fiftyBox {
+    float: none;
+    width: 100%;
+    padding: 30px;
+  }
+
+  .left, .right {
+    padding: 0 100px;
+  }
+
+  .fiftyBox img {
+    width: 50%;
+    height: 200px;
+  }
+
+  .twoBox p {
+    padding: 0 30px;
+  }
+
+  /* Volunteer */
+  .volunteerGround {
+    padding: 40px 80px;
+    height: auto;
+  }
+
+  .volunteerBox {
+    margin: 0;
+  }
+
+  .volunteerBox p {
+    padding: 0 30px;
+  }
+
+  /* Footer */
+  .footerFifty, .footer-column {
+    float: none;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .footer-social {
+    margin-bottom: 30px;
+  }
+
+  .footerColumnFifty {
+    float: none;
+    width: 100%;
+  }
+
+  .levelLocation {
+    padding: 0;
+  }
+
+  .footer-logo {
+    float: none;
+    display: block;
+    margin: 10px auto;
+  }
+
+  .footer-social img {
+    float: none;
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .copyright {
+    width: 100%;
+  }
+
+  .featureFifty,
+  .classPercent {
+    float: none;
+    width: 100%;
+  }
+
+  /*
+  .featureFifty, .classPercent {
+    width: 50%;
+    float: left;
+  }
+
+  .padLeft {
+    padding-left: 350px;
+  }
+
+  .padRight {
+    padding-right: 350px;
+  }
+  */
+}
+
+/* Fix Nav Overlap for 1024px Screens */
+/*@media screen and (width: 1024px) {
+  .nav-left,
+  .nav-center,
+  .nav-right {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .donate-button {
+    margin-top: 10px;
+  }
+
+  .nav-center img {
+    height: 40px;
+    margin-top: 10px;
+  }
+}*/
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

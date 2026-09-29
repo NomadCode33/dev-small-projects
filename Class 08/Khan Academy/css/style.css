@@ -1,0 +1,64 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+
+}
+
+
+/************************************************************************************
+/* LAYOUT
+/************************************************************************************/
+
+/******************************************
+/* NAVIGATION BAR
+/*******************************************/
+/* Doing this means just the anchor tag, the form, and ul will inherit these features
+   The form will be exempt */
+header nav > * {
+     float: left;
+     width: 15%;
+     margin: 0 4%;
+     list-style: none;
+}
+
+header nav li {
+     float: left;
+     width: 33%;
+}
+
+
+/******************************************
+/* MAIN
+/*******************************************/
+main > section {
+     width: 50%;
+     height: 600px;
+     float: left;
+}
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

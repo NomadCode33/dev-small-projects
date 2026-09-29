@@ -1,0 +1,575 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES + FONT
+/*******************************************/
+
+body {
+  background: #f6f9fc !important;
+  color: #1e293b;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Inter', 'Helvetica Neue', 'Segoe UI', 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #0f172a;
+}
+
+ul {
+  list-style: none;
+}
+
+.clearfix li, .clearfix h2, .introSource h1 {
+  font-family: 'Inter Tight', 'Helvetica Neue', 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.tagline, .nav-cta {
+  font-weight: bold;
+}
+
+.main-button {
+  font-weight: 600;
+}
+
+.introSource h1 {
+  font-weight: 700;
+}
+
+
+/************************************************************************************
+/* LAYOUT
+/************************************************************************************/
+/******************************************
+/* HEADER NAVIGATION
+/*******************************************/
+header {
+  width: 100%;
+  height: 70px;
+  /*border-bottom: 1px solid #e2e8f0;*/
+}
+
+nav {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px 40px; /* padding left/right for edge breathing room */
+  height: 40px;
+}
+
+/* Logo */
+nav h2 {
+  float: left;
+  font-size: 1.2rem;
+  line-height: 40px;
+  margin: 0;
+}
+
+/* Button */
+.nav-cta {
+  float: right;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  background: #344657;
+  color: white;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Nav links - centered */
+nav ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 40px;
+  display: flex;
+  gap: 85px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  color: #0f172a;
+  font-size: 0.95rem;
+  text-decoration: none;
+  line-height: 40px;
+}
+
+
+/******************************************
+/* MAIN INTRO SECTION
+/*******************************************/
+main {
+  width: 90%;
+  margin: 60px auto;
+}
+
+.introSource {
+  float: left;
+  width: 45%;
+  text-align: left;
+}
+
+.introSource .tagline {
+  text-transform: uppercase;
+  color: #64748b;
+  font-size: 0.75rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.introSource h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cta-group {
+  padding: 0;
+}
+
+/* Ensure the parent clears the floated children */
+.cta-group li {
+  float: none;
+  width: 100%;
+  overflow: hidden; /* Clears float without clearfix */
+  margin-top: 10px;
+}
+
+/* Make input left-aligned and extend its width */
+input[type="text"] {
+  float: left;
+  width: 70%;               /* Adjust as needed for desired extension */
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-right: 10px;
+}
+
+/* Float the button beside it */
+.main-button {
+  float: left;
+  padding: 8px 20px;
+  background-color: #344657;
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.introSource p {
+  clear: both;
+  margin-top: 20px;
+  color: #475569;
+}
+
+/* Image section */
+.introImage {
+  float: right;
+  width: 50%;
+  text-align: center;
+}
+
+.introImage img {
+  width: 80%;
+}
+
+/******************************************
+/* FEATURES SECTION
+/*******************************************/
+.featureGroup {
+  width: 90%;
+  margin: 80px auto;
+  overflow: hidden;
+}
+
+.equalBox {
+  float: left;
+  width: 23%;
+  margin-right: 2.6%;
+  text-align: left;
+}
+
+.equalBox:last-child {
+  margin-right: 0;
+}
+
+.equalBox img {
+  width: 40px;
+  margin-bottom: 15px;
+}
+
+.equalBox h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.equalBox p {
+  font-size: 0.9rem;
+  color: #475569;
+  margin-bottom: 10px;
+}
+
+.equalBox a {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #0f172a;
+}
+
+/******************************************
+/* MEDIA QUERIES
+/*******************************************/
+/* -------------------------------
+   PHONE VIEW (≤ 480px)
+-------------------------------- */
+@media screen and (max-width: 480px) {
+  nav {
+    padding: 15px 20px;
+    text-align: center;
+    height: auto;
+  }
+
+  nav h2 {
+    float: none;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  nav ul, .nav-cta {
+    display: none;
+  }
+
+  .introSource {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .introSource .tagline,
+  .introSource h1 {
+    text-align: left;
+    max-width: 90%;
+    margin: 0 auto 10px auto;
+  }
+
+  .introSource h1 {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  .introSource p {
+    font-size: 1rem;
+    margin: 20px 10px;
+  }
+
+  .cta-group li {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .cta-group form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  input[type="text"],
+  .main-button {
+    width: 90%;
+    margin: 0px auto;
+    max-width: 320px;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+  }
+
+  .main-button {
+    padding: 10px;
+    background-color: #344657;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .introImage {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .introImage img {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .featureGroup {
+    width: 95%;
+    margin: 30px auto;
+  }
+
+  .equalBox {
+    width: 100%;
+    float: none;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .equalBox img {
+    width: 50px;
+  }
+}
+
+
+/* -------------------------------
+   TABLET VIEW (≤ 768px)
+-------------------------------- */
+/* iPad Mini (768px width) - Portrait */
+@media screen and (max-width: 768px) and (min-width: 768px) {
+  nav {
+    padding: 20px;
+    height: auto;
+    text-align: center;
+  }
+
+  nav h2 {
+    float: none;
+    display: block;
+    font-size: 1.6rem;
+    margin: 10px auto;
+  }
+
+  nav ul,
+  .nav-cta {
+    display: none;
+  }
+
+  .introSource {
+    float: none;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    text-align: left;
+  }
+
+  .introSource .tagline,
+  .introSource h1 {
+    text-align: left;
+    margin: 0 0 10px 0;
+  }
+
+  .introSource h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .cta-group {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cta-group li {
+    float: none;
+    display: block;
+    width: 100%;
+  }
+
+  .cta-group form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input[type="text"],
+  .main-button {
+    width: 90%;
+    margin: 0px auto;
+    max-width: 400px;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+  }
+
+  .main-button {
+    padding: 10px;
+    background-color: #344657;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .introImage {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .introImage img {
+    width: 80%;
+    max-width: 400px;
+  }
+
+  .featureGroup {
+    width: 95%;
+    margin: 60px auto;
+  }
+
+  .equalBox {
+    width: 47%;
+    float: left;
+    margin: 1.5%;
+    text-align: center;
+  }
+}
+
+
+/* Newer iPads/Tablets (820 to 1024px width) - Portrait */
+@media screen and (min-width: 820px) and (max-width: 1024px) {
+  nav {
+    padding: 20px 40px;
+    text-align: center;
+    height: auto;
+  }
+
+  nav h2 {
+    float: none;
+    display: block;
+    font-size: 1.6rem;
+    margin: 10px auto;
+  }
+
+  nav ul,
+  .nav-cta {
+    display: none;
+  }
+
+  .introSource {
+    float: none;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    text-align: left;
+  }
+
+  .introSource .tagline,
+  .introSource h1 {
+    text-align: left;
+    margin: 0 0 10px 0;
+  }
+
+  .introSource h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .cta-group {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cta-group li {
+    float: none;
+    display: block;
+    width: 100%;
+  }
+
+  .cta-group form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input[type="text"],
+  .main-button {
+    width: 90%;
+    margin: 0px auto;
+    max-width: 400px;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+  }
+
+  .main-button {
+    padding: 10px;
+    background-color: #344657;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .introImage {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .introImage img {
+    width: 80%;
+    max-width: 500px;
+  }
+
+  .featureGroup {
+    width: 95%;
+    margin: 60px auto;
+  }
+
+  .equalBox {
+    width: 45%;
+    margin: 2.5%;
+    float: left;
+    text-align: center;
+  }
+}
+
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

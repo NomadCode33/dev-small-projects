@@ -1,0 +1,80 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+
+}
+
+
+/************************************************************************************
+/* LAYOUT
+/************************************************************************************/
+
+/******************************************
+/* NAVIGATION BAR, SECTION (MAIN HEADLINE) + ASIDE
+/*******************************************/
+body {
+     width: 100%;
+     margin: 0 auto;
+}
+
+nav, main, aside {
+     width: 10%;
+     float: left;
+}
+
+nav ul li {
+     list-style: none;
+}
+
+main {
+     width: 50%;
+}
+
+aside {
+     width: 40%;
+}
+
+/******************************************
+/* SECTION (BOTTOM HEADLINES)
+/*******************************************/
+aside + section {
+     width: 90%;
+     float: right;
+}
+
+section section section {
+     width: 30%;
+     float: left;
+}
+
+/* Clearfix hack */
+main::after, aside::after, section::after {
+     content: "";
+     display: table;
+     clear: both;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

@@ -1,0 +1,96 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+
+}
+
+
+/************************************************************************************
+/* LAYOUT
+/************************************************************************************/
+
+/******************************************
+/* NAVIGATION BAR
+/*******************************************/
+/* Forms the background basis for the navigation bar */
+header {
+  height: 50px;
+  background: black;
+  color: white;   
+}
+
+/* Selects everything in the navigation and floats it left */
+header nav * {
+     width: 10%;
+     float: left;
+     color: white;
+     display: block;
+     
+}
+
+/* Make the whole ul spaced out in width by 65% */
+nav ul {
+     width: 65%;
+
+}
+
+/* Makes the text bar its full width */
+header form input {
+     width: 100%;
+}
+
+/******************************************
+/* MAIN (Section)
+/*******************************************/
+
+/* Makes it so that both sections in main are floated 50% */
+main > section {
+     width: 50%;
+     float: left;
+     height: 500px;
+}
+
+/* In main, we target the 2nd section (sibling) in main and target the sections inside it.
+   We also account for the 500px of the overall section height, and in that box it's
+   50% since 2 boxes are in the same row */
+main section + section section {
+     width: 50%;
+     height: 250px;
+     float: left;
+     border: 1px solid black;
+}
+
+/******************************************
+/* NEWS (Section)
+/*******************************************/
+/* Makes it so that the News section articles are split evenly */
+main + section > section {
+     width: 33.3333%;
+     float: left;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
