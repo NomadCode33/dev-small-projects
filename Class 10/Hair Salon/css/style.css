@@ -1,0 +1,452 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+body {
+  font-family: 'Lato','Montserrat', sans-serif;
+}
+
+.logo {
+     font-family: 'Cormorant Garamond', 'Libre Baskerville', serif;
+}
+
+h1,
+h2,
+h3,
+h5,
+.srvButton,
+.hero-text p,
+.visitBox,
+.nav-left,
+.nav-center,
+.nav-right {
+  font-family: 'Merriweather','Playfair Display', serif;
+}
+
+.qualityService p, .makeMoment p {
+     font-family: 'Montserrat', serif, sans-serif;
+}
+
+
+/************************************************************************************
+/* LAYOUT
+/************************************************************************************/
+/******************************************
+/* NAV SECTION
+*******************************************/
+/* HEADER LAYOUT */
+header {
+  width: 100%;
+  height: 70px;
+  background: white;
+  border-bottom: 1px solid #ccc;
+  padding: 0 5%;
+}
+
+.nav-left {
+  float: left;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-left h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.nav-center {
+  float: left;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-center img {
+     height: 10px;
+}
+
+.nav-center ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.nav-center li {
+  float: left;
+  width: 12.5%;
+  text-align: center;
+}
+
+.nav-center a {
+  display: block;
+  padding: 25px 0;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.nav-right {
+  float: left;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-right .srvButton {
+  margin: 0;
+}
+
+/******************************************
+/* HERO SECTION
+*******************************************/
+.hero {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  background: #f5f5f5;
+}
+
+.hero-img {
+  float: right;
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  float: left;
+  width: 40%;
+  padding: 40px;
+  background: #fff;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.visitBox {
+  margin-top: 20px;
+  padding: 20px;
+  background: black;
+  color: white;
+  width: 70%;
+}
+
+/******************************************
+/* SIXTY BOX
+*******************************************/
+.sixtyBox {
+  margin: 40px auto;
+  width: 90%;
+}
+
+.qualityService {
+  float: left;
+  width: 30%;
+  margin: 0 1.66%;
+  text-align: center;
+}
+
+.qualityService img {
+  width: 20%;
+  height: 70px;
+  object-fit: cover;
+}
+
+/******************************************
+/* MOMENT BOX
+*******************************************/
+.momentBox {
+  background: #eee;
+  padding: 40px 5%;
+}
+
+.makeMoment {
+  float: left;
+  width: 45%;
+  margin: 0 2.5%;
+}
+
+.makeMoment h3 {
+  font-size: 24px;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+
+.makeMoment p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.makeMoment a.srvButton {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.makeMoment img {
+  width: 100%;
+  height: auto;
+}
+
+/******************************************
+/* BUTTON STYLE
+*******************************************/
+.srvButton {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid black;
+  background: black;
+  color: white;
+  text-decoration: none;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 11px;
+}
+
+.white {
+  background: white;
+  color: black
+}
+
+/*.srvButton:hover {
+  background: black;
+  color: white;
+} */
+
+/******************************************
+/* MEDIA QUERIES
+*******************************************/
+/* Tablets (768px and below) */
+@media screen and (max-width: 768px) {
+  .nav-left,
+  .nav-center,
+  .nav-right {
+    float: none;
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+
+  .nav-left h2 {
+    line-height: 70px;
+    font-size: 35px;
+  }
+
+  .nav-center ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-center li {
+    width: 25%;
+    margin-bottom: 10px;
+  }
+
+  .hero {
+    height: auto;
+  }
+
+  .hero-img,
+  .hero-text {
+    float: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-text {
+    padding: 30px;
+    text-align: center;
+  }
+
+
+  .visitBox {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  .qualityService {
+    float: none;
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .qualityService img {
+    width: 8%;
+    height: 70px;
+    object-fit: cover;
+  }
+
+  .makeMoment {
+    float: none;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+/* Phones (480px and below) */
+@media screen and (max-width: 480px) {
+  header {
+    padding: 10px;
+  }
+
+  .nav-left h2 {
+    line-height: 50px;
+    font-size: 35px;
+  }
+
+  .nav-center li {
+    width: 50%;
+  }
+
+  .hero-text {
+    padding: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .qualityService img {
+    width: 20%;
+    height: 70px;
+    object-fit: cover;
+  }
+
+  .makeMoment h3 {
+    font-size: 20px;
+  }
+
+  .srvButton {
+    width: 100%;
+    padding: 12px;
+    font-size: 12px;
+  }
+}
+
+/* Tablets and small desktops (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .nav-left,
+  .nav-center,
+  .nav-right {
+    float: none;
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .nav-left h2 {
+    line-height: 70px;
+    font-size: 40px;
+  }
+
+  .nav-center ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-center li {
+    width: 20%;
+    margin-bottom: 10px;
+  }
+
+  .hero {
+    height: auto;
+  }
+
+  .hero-img {
+    float: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-text {
+    float: none;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .visitBox {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  .qualityService {
+    float: none;
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .qualityService img {
+    width: 8%;
+    height: 70px;
+    object-fit: cover;
+  }
+
+  .qualityService p {
+    padding: 0 100px;
+  }
+
+  .sixtyBox {
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  .makeMoment {
+    float: none;
+    width: 90%;
+    margin: 0 auto 30px auto;
+  }
+
+  .makeMoment img {
+    width: 100%;
+  }
+
+  .srvButton {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
