@@ -1,0 +1,337 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 14px;
+     color: #14143c;
+     background: white;
+}
+
+h1, h2 {
+     font-family: Georgia, "Times New Roman", serif;
+     font-weight: bold;
+     color: #14143c;
+}
+
+h3 {
+     font-size: 12px;
+     color: #ff9800;
+     margin-bottom: 10px;
+}
+
+a {
+     text-decoration: none;
+     color: #14143c;
+}
+
+img {
+     max-width: 100%;
+}
+
+
+/************************************************************************************
+/* LAYOUT
+/************************************************************************************/
+/******************************************
+/* NAVIGATION BAR
+/*******************************************/
+header {
+     height: 70px;
+     background: #e8f0f4;
+}
+
+header nav * {
+     float: left;
+     margin: 0 2%;
+     display: block;
+     list-style: none;
+}
+
+/* logo: a little bigger than the cart and search icons */
+header nav img {
+     width: 28px;
+     margin: 21px 0 0 8%;
+}
+
+/* link list pushed to the right side */
+header nav ul {
+     width: 50%;
+     margin: 0 0 0 32%;
+}
+
+header nav li {
+     margin: 26px 3% 0 3%;
+     font-size: 12px;
+}
+
+/* removes the extra side margins on the links so words like "About Us" don't wrap */
+header nav li a {
+     margin: 0;
+}
+
+/* cart and search icons */
+header nav li img {
+     width: 20px;
+     margin: 0;
+}
+
+/******************************************
+/* 1) INTRO
+/*******************************************/
+.introBox {
+     background: #e8f0f4;
+     height: 400px;
+}
+
+.introBox header,
+.welcomeCuisine {
+     float: left;
+     width: 10%;
+}
+
+.welcomeCuisine {
+     width: 45%;
+}
+
+.welcomeCuisine h1 {
+     font-size: 48px;
+     line-height: 1.2;
+     margin-top: 50px;
+     margin-bottom: 25px;
+}
+
+.welcomeCuisine ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+
+.welcomeCuisine li {
+     float: left;
+}
+
+/* search box takes 70% of the row, Location button takes 20% */
+.welcomeCuisine li:first-child {
+     width: 70%;
+}
+
+.welcomeCuisine li + li {
+     width: 20%;
+}
+
+.welcomeCuisine input {
+     width: 100%;
+     height: 35px;
+     padding: 0 10px;
+     background: white;
+     border: 1px solid #dddddd;
+     border-radius: 3px;
+}
+
+.welcomeCuisine li + li a {
+     display: block;
+     height: 35px;
+     line-height: 35px;
+     text-align: center;
+     background: #ff9800;
+     color: white;
+     font-size: 12px;
+     border-radius: 3px;
+}
+
+.welcomeCuisine ul + section {
+     clear: left;
+     padding-top: 25px;
+}
+
+.welcomeCuisine ul + section a {
+     float: left;
+     margin-right: 25px;
+     font-size: 12px;
+}
+
+.welcomeCuisine ul + section img {
+     width: 14px;
+     margin-right: 6px;
+     vertical-align: middle;
+}
+
+/* big berry photo on the right: fixed height so it fits the intro box.
+   object-fit crops the photo instead of squishing it */
+.welcomeCuisine + .welcomeCuisine img {
+     width: 100%;
+     height: 400px;
+     object-fit: cover;
+     vertical-align: bottom;
+}
+
+/******************************************
+/* 2) DISCOVER
+/*******************************************/
+.discoverBox {
+     background: white;
+     height: 600px;
+}
+
+.tea {
+     float: left;
+     width: 40%;
+}
+
+.discoverBox img {
+     width: 100%;
+     height: 600px;
+     object-fit: cover;
+     vertical-align: bottom;
+}
+
+.aboutRestaurant {
+     width: 60%;
+     padding: 165px 80px 0 40px;
+}
+
+.aboutRestaurant h2 {
+     font-size: 32px;
+     line-height: 1.2;
+     margin-bottom: 25px;
+}
+
+.aboutRestaurant p {
+     font-size: 12px;
+     line-height: 1.8;
+     margin-bottom: 15px;
+}
+
+.aboutRestaurant a {
+     display: block;
+     width: 130px;
+     height: 35px;
+     line-height: 35px;
+     margin-top: 25px;
+     text-align: center;
+     background: #ff9800;
+     color: white;
+     font-size: 12px;
+     border-radius: 3px;
+}
+
+/******************************************
+/* 3) Specility
+/*******************************************/
+.specilityBox {
+     background: #f5f8f9;
+     height: 540px;
+     padding-top: 40px;
+}
+
+.specilityBox h3,
+.specilityBox h2 {
+     text-align: center;
+}
+
+.specilityBox h2 {
+     font-size: 32px;
+     margin-bottom: 25px;
+}
+
+.specilityBox nav * {
+     float: left;
+     margin: 0 2%;
+     list-style: none;
+     display: block;
+}
+
+.specilityBox ul {
+     width: 45%;
+     margin: 0 0 0 27.5%;
+     border-bottom: 1px solid #dddddd;
+}
+
+/* 5 tabs x 20% = the full width of the line, text centered in each */
+.specilityBox nav li {
+     width: 20%;
+     margin: 0;
+     padding-bottom: 10px;
+     font-size: 12px;
+     text-align: center;
+}
+
+.specilityBox nav li a {
+     float: none;
+     margin: 0;
+}
+
+.specilityBox nav li:first-child {
+     border-bottom: 2px solid #ff9800;
+}
+
+.specilityBox nav li:first-child a {
+     color: #ff9800;
+}
+
+.specilityBox header,
+.foodBox,
+.foodItems,
+.specilityBox footer {
+     float: left;
+     width: 10%;
+}
+
+.specilityBox header {
+     clear: both;
+     height: 0;
+}
+
+.foodBox {
+     width: 80%;
+     margin-left: 10%;
+     margin-top: 40px;
+     clear: both;
+}
+
+/* the empty header and footer inside the food box take no space,
+   so the 4 food items (4 x 25%) fit on one row */
+.foodBox header,
+.foodBox footer {
+     width: 0;
+     height: 0;
+}
+
+.foodItems {
+     height: 300px;
+     width: 25%;
+     background: #cccccc;
+     border: 8px solid #f5f8f9;
+}
+
+.foodItems img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
