@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Search any cocktail and get its ingredients and directions">
+    	<meta name="keywords" content="cocktail, drinks, api">
+
+		<title>Cocktail Finder</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="wrapper">
+
+			<h1>Cocktail Finder</h1>
+			<p class="tip">Type in a cocktail name (ex: margarita or moscow mule)</p>
+
+			<div class="finder">
+				<input type="text" name="" value="" placeholder="Try Old Fashioned">
+				<button type="button" name="button">Get Cocktail</button>
+			</div>
+
+			<div class="drink-card">
+				<h2>Drink Name</h2>
+				<img class="drink-img" src="" alt="">
+				<h3>Drink Details</h3>
+				<div class="stats">
+					<h4>Category<span class="category"></span></h4>
+					<h4>Glass<span class="glass"></span></h4>
+					<h4>Type<span class="alcoholic"></span></h4>
+				</div>
+
+				<h3>Ingredients</h3>
+				<ul class="ingredients"></ul>
+
+				<h3>Directions</h3>
+				<p class="directions"></p>
+			</div>
+
+		</div>
+
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>

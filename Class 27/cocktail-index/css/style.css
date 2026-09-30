@@ -1,0 +1,162 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body{
+  background-color: #fff3e0;
+  color: #3b2a20;
+  font-family: Georgia, 'Times New Roman', serif;
+  text-align: center;
+}
+
+.wrapper{
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+img{
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  border: 3px solid #264653;
+  border-radius: 50%;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+h1{
+  color: #264653;
+  font-size: 2.6em;
+}
+
+.tip{
+  color: #7a5c48;
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+/* search bar: input and button sit side by side */
+.finder{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+input{
+  width: 60%;
+  padding: 12px 16px;
+  border: 3px solid #264653;
+  border-right: none;
+  border-radius: 30px 0 0 30px;
+  background-color: #ffffff;
+  color: #3b2a20;
+}
+
+input:focus{
+  outline: none;
+  background-color: #fffaf2;
+}
+
+button{
+  padding: 12px 20px;
+  border: 3px solid #264653;
+  border-radius: 0 30px 30px 0;
+  background-color: #e76f51;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #d65a3c;
+}
+
+/* drink card */
+.drink-card{
+  background-color: #ffffff;
+  border: 3px solid #264653;
+  border-radius: 12px;
+  box-shadow: 8px 8px 0 #264653;
+  padding: 30px 20px;
+}
+
+h2{
+  color: #e76f51;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.drink-img{
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+h3{
+  color: #264653;
+  margin: 30px 0 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px dashed #e76f51;
+}
+
+/* details row: three boxes across */
+.stats{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+h4{
+  flex: 1;
+  padding: 12px 8px;
+  background-color: #fff3e0;
+  border-radius: 8px;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #7a5c48;
+}
+
+span{
+  display: block;
+  margin-top: 6px;
+  color: #264653;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* ingredients: no bullets, shown as tags */
+.ingredients{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ingredients li{
+  padding: 8px 14px;
+  background-color: #2a9d8f;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.directions{
+  line-height: 1.6;
+  text-align: center;
+}

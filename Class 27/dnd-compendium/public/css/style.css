@@ -1,0 +1,611 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES + LAYOUT
+/*******************************************/
+html {
+  font-size: 62.5%; /* 16px * 62.5% = 10px, 1rem = 10px; */
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: black;
+  /*background-image: url('../img/shenronplaymat.png');*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh; /* makes sure it fills screen */
+}
+
+.bangers {
+  font-family: "Bangers", "Rubik", sans-serif;
+}
+
+.comp-item {
+  color: rgb(245, 193, 66);
+  font-size: 2.4rem;
+}
+
+/******************************************
+/* HEADER SECTION
+/*******************************************/
+header {
+  background-color: rgb(136, 8, 8);
+  height: 5rem;
+}
+
+.head-title {
+  margin: 0;
+  width: 20rem;
+  display: flex;
+  align-items: center;  /* vertically align text with logo */
+  gap: 1.0rem;
+  color: white;
+}
+/*width: 15rem*/
+
+.head-title h1 {
+  font-size: 1.5rem;
+}
+
+.head-title a {
+  display: inline-block; /* shrink to content size */
+  width: auto;           /* remove any inherited width */
+  height: auto;          /* remove any inherited height */
+  padding: 0;            /* remove extra padding */
+  margin: 0;             /* remove extra margin */
+}
+
+.icon {
+  display: block;
+  margin: 0.85rem 0 0.85rem 0.9rem;
+  width: 3rem;
+  height: 3rem;
+  filter: drop-shadow(0.8rem 0.8rem 1rem rgba(0, 0, 0, 0.9));
+}
+/*width: 22%*/
+/*width: 70%;*/
+
+.header-box {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-bar nav {
+  line-height: 1.0;
+}
+
+.nav-box {
+  width: 30rem;
+  padding: 0;
+  margin: 1.3rem auto;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+}
+
+.nav-box li {
+  margin-right: 1rem;
+}
+
+.nav-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid rgb(249, 246, 238);
+  background-color: transparent;
+  vertical-align: middle;
+  color: rgb(249, 246, 238);
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  text-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+}
+
+.nav-button:hover {
+  background-color: rgb(40, 40, 43);
+  border: 0.1rem solid rgb(40, 40, 43);
+  color: rgb(245, 193, 66); /* or the header background color for contrast */
+  text-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.5rem 0.5rem 1rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+/**************************************************************
+/* PIC REST & DISCLAIMER
+/**************************************************************/
+.pic-rest {
+  height: 60rem;
+  margin: 0 auto;
+  width: 85%;
+  background-image: url('../img/dndbanner.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 30vh; /* makes sure it fills screen */
+}
+
+.disclaimer {
+  height: 15rem;
+  margin: 0 auto;
+  width: 90%;
+  color: rgb(245, 193, 66);
+  background-color: rgb(136, 8, 8);
+  text-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.2)
+}
+
+.disclaimer-content {
+  padding: 0 10rem 0 10rem;
+}
+
+.disclaimer-content h2 {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 2.4rem;
+}
+
+.disclaimer-content p {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.d-content {
+  padding-top: 3.5rem;
+}
+
+
+/******************************************
+/* DEMO AREA
+/*******************************************/
+.demo-area {
+  background-color: rgb(136, 8, 8);
+  margin: 0 auto;
+  height: 180rem;
+  width: 90%;
+}
+
+.box-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: auto;
+  background-color: rgb(40, 40, 43);
+}
+
+.feature {
+  margin: 0.1rem auto;
+  height: 45rem;
+  margin-bottom: 0;   
+  text-shadow: 0.4rem 0.4rem 0.8rem rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feature-content {
+  text-align: center;
+}
+
+.feature img {
+  width: 75%;
+  border: 0.1rem solid #001833;
+  border-radius: 0.3rem;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover img {
+  transform: scale(1.05);
+}
+
+.page-describe {
+  padding: 0 2rem;
+  font-size: 1.45rem; /* change both */
+  color: rgb(249, 246, 238);
+  text-shadow: 0.4rem 0.4rem 0.8rem rgba(0, 0, 0, 0.7);
+}
+
+.main-button {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border: 0.1rem solid rgb(249, 246, 238);
+  background-color: transparent;
+  vertical-align: middle;
+  color: rgb(249, 246, 238);
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  text-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.3rem 0.3rem 0.8rem rgba(0, 0, 0, 0.5);
+}
+
+.main-button:hover {
+  background-color: rgb(201, 42, 40);
+  border: 0.1rem solid rgb(201, 42, 40);
+  color: rgb(245, 193, 66); /* or the header background color for contrast */
+  text-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.5rem 0.5rem 1rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+/******************************************
+/* FOOTER
+/*******************************************/
+.background-footer {
+  height: 15rem; /*It was at 75 before*/
+  width: 90%;
+  margin: 0 auto;
+  background-color: rgb(136, 8, 8);
+}
+
+/******************************************************************
+/* MEDIA QUERIES
+/******************************************************************/
+/******************************************
+/* PHONES
+/*******************************************/
+/* Phones (480px and below) */
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  .header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-box {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  .nav-box li {
+    display: inline-block; /* keeps nav buttons horizontal */
+    margin: 0 0.8rem;
+  }
+
+  .header-title {
+    display: none;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .pic-rest {
+    height: 30rem;
+  }
+
+  .pop-title {
+    height: 20rem;
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  .disclaimer {
+    height: 42rem;
+  }
+
+  .disclaimer-content {
+    padding: 0 5rem 0 5rem;
+  }
+
+  .demo-area {
+    background-color: white;
+    height: 120.2rem;
+    padding-top: 3.5rem;
+  }
+
+  .box-container {
+    display: block;
+    justify-content: center;
+  }
+
+  .feature {
+    height: 40rem;
+    display: flex;
+  }
+
+  .background-footer {
+    height: 30rem;
+    margin-top: 10rem;
+  }
+}
+
+/* landscape */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .header-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.6rem;
+  }
+
+  .header-title {
+    width: 5rem;
+  }
+
+  .nav-box {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.6rem;
+    margin: 0 auto;
+  }
+
+  .pic-rest {
+    height: 40rem;
+  }
+
+  .pop-title {
+    height: 40rem;
+    font-size: 5rem;
+    line-height: 8.0;
+    text-align: center;
+  }
+
+  .disclaimer,
+  .disclaimer-content {
+    height: auto;
+    padding: 0 3.2rem;
+  }
+
+  .disclaimer {
+    height: 25.5rem;
+  }
+
+  .demo-area {
+    background-color: white;
+    height: 150.3rem;
+    padding-top: 3.5rem;
+  }
+
+  .box-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feature {
+    height: 55rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .feature img {
+    width: 80%;
+  }
+
+  .background-footer {
+    height: 30rem;
+    margin-top: 25rem;
+  }
+}
+
+/******************************************
+/* SMALLER PHONES & SMALL TABLETS
+/*******************************************/
+/* Phones (481px and 699) */
+@media screen and (max-width: 481px) and (max-width: 699px) and (orientation: portrait) {
+  .header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-box {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  .nav-box li {
+    display: inline-block; /* keeps nav buttons horizontal */
+    margin: 0 0.8rem;
+  }
+
+  .header-title {
+    display: none;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .pic-rest {
+    height: 30rem;
+  }
+
+  .pop-title {
+    height: 20rem;
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  .disclaimer {
+    height: 42rem;
+  }
+
+  .disclaimer-content {
+    padding: 0 5rem 0 5rem;
+  }
+
+  .demo-area {
+    background-color: white;
+    height: 120.2rem;
+    padding-top: 3.5rem;
+  }
+
+  .box-container {
+    display: block;
+    justify-content: center;
+  }
+
+  .feature {
+    height: 40rem;
+    display: flex;
+  }
+
+  .background-footer {
+    height: 30rem;
+    margin-top: 10rem;
+  }
+}
+
+
+/******************************************
+/* MINI TABLETS
+/*******************************************/
+/* ipad/mini type tablets (min-width: 700px) and (max-width: 850px) */
+@media screen and (min-width: 700px) and (max-width: 850px) and (orientation: portrait) {
+  .disclaimer {
+    height: 26rem;
+  }
+
+  .disclaimer-content {
+    padding: 0 8rem 0 8rem;
+  }
+
+  .box-container {
+    display: block;
+    justify-content: center;
+  }
+
+  .demo-area {
+    background-color: white;
+    height: 165.2rem;
+    padding-top: 3rem;
+  }
+
+  .feature {
+    height: 55rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .background-footer {
+    height: 30rem;
+    margin-top: 7.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /* Covers iPads 9.7", 10.2", some Minis */
+  .disclaimer {
+    height: 22rem;
+  }
+
+  .disclaimer-content {
+    padding: 0 8rem 0 8rem;
+  }
+
+  .demo-area {
+    background-color: white;
+    height: 210.3rem;
+    padding-top: 3rem;
+  }
+
+  .box-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feature {
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .background-footer {
+    height: 30rem;
+    margin-top: 7.5rem;
+  }
+}
+
+/******************************************
+/* NEWER TABLETS
+/*******************************************/
+/* Tablets (min-width: 851px and max-width: 1366px) */
+@media screen and (min-width: 851px) and (max-width: 1366px) and (orientation: portrait) {
+  .disclaimer {
+    height: 22rem;
+  }
+  
+  .disclaimer-content {
+    padding: 0 8rem 0 8rem;
+  }
+
+  .box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .demo-area {
+    background-color: white;
+    height: 210.3rem;
+    padding-top: 3rem;
+  }
+
+  .feature {
+    height: 70rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .background-footer {
+    height: 30rem;
+    margin-top: 7.5rem;
+  }
+}
+
+/* Newer iPads Air & iPad Pro 11" */
+@media screen and (min-width: 102.5rem) and (max-width: 136.6rem) and (orientation: landscape) {
+  .disclaimer {
+    height: 21rem;
+  }
+  
+  .disclaimer-content {
+    padding: 0 8rem 0 8rem;
+  }
+
+  
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+

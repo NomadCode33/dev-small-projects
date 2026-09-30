@@ -1,0 +1,106 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body{
+  background-color: #0b1026;
+  color: #e8ecf5;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.container{
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+img{
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+h1{
+  color: #f5d76e;
+}
+
+.instructions{
+  color: #a9b4d0;
+  margin-bottom: 20px;
+}
+
+.search{
+  margin-bottom: 30px;
+}
+
+input{
+  width: 60%;
+  padding: 10px;
+  border: 2px solid #2a3566;
+  border-radius: 6px;
+  background-color: #151c3d;
+  color: #e8ecf5;
+}
+
+input:focus{
+  outline: none;
+  border-color: #f5d76e;
+}
+
+button{
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f5d76e;
+  color: #0b1026;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #ffe88f;
+}
+
+.results{
+  background-color: #151c3d;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+h2{
+  color: #f5d76e;
+  margin-bottom: 5px;
+}
+
+h3{
+  color: #a9b4d0;
+  margin-bottom: 15px;
+}
+
+h4{
+  padding: 8px 0;
+  border-bottom: 1px solid #2a3566;
+}
+
+h4:last-child{
+  border-bottom: none;
+}
+
+span{
+  color: #f5d76e;
+  font-weight: normal;
+}
